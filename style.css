@@ -1,0 +1,44 @@
+body{
+  background:linear-gradient(
+ rgba(0, 0, 0, 0.45),
+ rgba(0, 0, 0, 0.45)), url("william-iven-8514-unsplash.jpg");
+  background-size: cover;
+}
+.container{
+  font-family: 'Mukta Malar', sans-serif;
+  width:600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  border: solid 2px #fffaf0;
+  border-radius: 10px;
+  background: transparent;
+  color: #fffaf0;
+}
+.task_list{
+  padding-bottom: 10px;
+  margin-left: 30px;
+}
+.task_list input{
+  background: transparent;
+  border: solid 1px #fffaf0;
+  border-radius: 10px;
+  color: #fffaf0;
+}
+.addtask{
+  padding-bottom: 10px;
+  margin-left: 30px;
+}
+.addtask input{
+  background: transparent;
+  border: solid 1px #fffaf0;
+  border-radius: 10px;
+  color: #fffaf0;
+}
+input[type=checkbox]{
+  background: transparent;
+  border-radius:4px;
+}
+hr{
+  color:#fffaf0;
+}
