@@ -1,6 +1,5 @@
 <?php
 if(isset($_POST["tache"])){
-
 //récuprer les données
 $todo=$_POST['tache'];
 //sanitizer
@@ -19,7 +18,6 @@ $datasent=json_encode($log);
 file_put_contents($url,$datasent);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,32 +36,19 @@ file_put_contents($url,$datasent);
       echo "<input type='checkbox' name='check' value=".$value.">".$value."<br>";
   }
 ?>
-          <form action="index.php" method="post">
-            <input type="submit" name="enregistrer" value="Fait">
-
+  <form action="index.php" method="post">
+    <input type="submit" name="enregistrer" value="Fait">
+  </form>
       </section>
-      <section class="fait">
+
         <h3> FAIT </h3>
 <?php
-$check=["check"];
-if(isset($_POST['enregister']) and !empty($check)){
-  $datareceived_done=file_get_contents($url_done);
-  $log_done=json_decode(datereceived_done);
-  $log_done []=$check;
-  $datasent_done=json_encode($log_done);
-  file_put_contents($url_done,$datasent_done);
-    foreach($log_done as $key =>$value){
-      echo "<s>.$value.</s>";
-    }
 
-}
+echo "<input type=\"checkbox\" id=". $key .">" . $value["tache"] . "<br>";
 ?>
 
 
         <textarea name="tache" id="tache" rows="1" cols="30"> </textarea>
         <input type="submit" name="ajouter" value="Ajouter une tâche">
-      </section>
-    </form>
-  </section>
-</body>
+  </body>
 </html>
