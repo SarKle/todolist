@@ -1,38 +1,9 @@
-
-Skip to content
-This repository
-
-    Pull requests
-    Issues
-    Marketplace
-    Explore
-
-    @sarahklewiec
-
-0
-0
-
-    0
-
-sarahklewiec/todolist
-Code
-Issues 0
-Pull requests 0
-Projects 0
-Wiki
-Insights
-Settings
-todolist/style.css
-32aad26 20 hours ago
-@ludovic2411 ludovic2411 css
-@sarahklewiec
-@ludovic2411
-executable file 44 lines (44 sloc) 822 Bytes
 body{
   background:linear-gradient(
  rgba(0, 0, 0, 0.45),
  rgba(0, 0, 0, 0.45)), url("william-iven-8514-unsplash.jpg");
   background-size: cover;
+  text-align: center;
 }
 .container{
   font-family: 'Mukta Malar', sans-serif;
@@ -72,17 +43,3 @@ input[type=checkbox]{
 hr{
   color:#fffaf0;
 }
-
-    © 2018 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Status
-    Help
-
-    Contact GitHub
-    API
-    Training
-    Shop
-    Blog
-    About
