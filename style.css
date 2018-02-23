@@ -1,44 +1,48 @@
 body{
-  background:linear-gradient(
- rgba(0, 0, 0, 0.45),
- rgba(0, 0, 0, 0.45)), url("jessica-lewis-512224-unsplash.jpg");
-  background-size: cover;
+background:linear-gradient(
+rgba(0, 0, 0, 0.45),
+rgba(0, 0, 0, 0.45)), url("jessica-lewis-512224-unsplash.jpg");
+background-size: cover;
 }
-.container{
-  font-family: 'Mukta Malar', sans-serif;
-  width:600px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  border: solid 2px #fffaf0;
-  border-radius: 10px;
-  background: transparent;
-  color: #fffaf0;
+.page{
+font-family: 'Mukta Malar', sans-serif;
+width:600px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 100px;
+border: solid 2px #fffaf0;
+border-radius: 10px;
+background: transparent;
+color: #fffaf0;
 }
-.task_list{
-  padding-bottom: 10px;
-  margin-left: 30px;
+.afaire{
+margin-left: 30px;
 }
-.task_list input{
-  background: transparent;
-  border: solid 1px #fffaf0;
-  border-radius: 10px;
-  color: #fffaf0;
+.afaire input{
+margin-left: 30px;
+background: transparent;
+border: solid 1px #fffaf0;
+border-radius: 10px;
+color: #fffaf0;
 }
-.addtask{
-  padding-bottom: 10px;
-  margin-left: 30px;
+.archive{
+margin-left: 30px;
 }
-.addtask input{
-  background: transparent;
-  border: solid 1px #fffaf0;
-  border-radius: 10px;
-  color: #fffaf0;
+.tache{
+padding-bottom: 10px;
+margin-left: 30px;
+}
+.tache input{
+background: transparent;
+border: solid 1px #fffaf0;
+border-radius: 10px;
+color: #fffaf0;
 }
 input[type=checkbox]{
-  background: transparent;
-  border-radius:4px;
+background: transparent;
+border-radius:4px;
+border-top: solid 1px #fffaf0;
 }
 hr{
-  color:#fffaf0;
+color:#fffaf0;
 }
