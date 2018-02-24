@@ -18,8 +18,8 @@ function sanitize($key, $filter=FILTER_SANITIZE_STRING){
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \\
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \
 if (isset($_POST['ajouter']) AND end($log)['nomtache'] != $_POST['tache']){ //Si on appuie sur le boutton ajouter...
-$add_tache =sanitize( $_POST['tache']); //je récupère la valeur que je veux ajouter
-$array_tache = array("nomtache" => $add_tache, // je la met dans un tableau
+  $add_tache =sanitize( $_POST['tache']); //je récupère la valeur que je veux ajouter
+  $array_tache = array("nomtache" => $add_tache, // je la met dans un tableau
 "fin" => false);
 $log[] = $array_tache; // je crée un tableau multi dimensionnel
 $json_enc= json_encode($log, JSON_PRETTY_PRINT); // j'encore pour json ( avec passage à la ligne )
@@ -57,44 +57,46 @@ $log = json_decode($json_enc, true);                //            ///
 <title>Pense-bete</title>
 </head>
 <body>
-<div class="page">
-<section class="afaire">
-<h2>A faire</h2>
-<form action="index.php" method="post" name="formafaire">
-<?php
-foreach ($log as $key => $value){
-//récupération valeur tableau multi dimension
-if ($value["fin"] == false){ // Si la valeur "fin" == false alors ...
-echo "<input type='checkbox' name='tache[]' value='".$value["nomtache"]."'/>
-<label for='choix'>".$value["nomtache"]."</label><br />"; // injecter input.//
-} // 'tache[]' en name pour..
-} // ..récupérer valeur checkée en tableau.
-?>
-<input type="submit" name="boutton" value="check" >
-</form>
-</section>
-<section class="archive">
-<h2>Fait</h2>
-<form action="index.php" method="post" name="formchecked">
-<?php
-foreach ($log as $key => $value){
-if ($value["fin"] == true){
-echo "<input type='checkbox' name='tache[]' value='".$value."'checked/>
-<label for='choix'>".$value["nomtache"]."</label><br />";
-}
-}
-?>
-</form>
-</section>
-<hr>
-<footer class="tache">
-<h2>Ajouter une tâche</h2>
-<form class="" action="index.php" method="post">
-<!-- <label for="tache">La tâche à effectuer</label> -->
-<input type="text" name="tache" value="">
-<input type="submit" name="ajouter" value="Ajouter">
-</form>
-</footer>
-</div>
+  <div class="page">
+    <section class="afaire">
+      <h2>A faire</h2>
+        <form action="index.php" method="post" name="formafaire">
+          <?php
+            foreach ($log as $key => $value){
+            //récupération valeur tableau multi dimension
+              if ($value["fin"] == false){ // Si la valeur "fin" == false alors ...
+                echo "<input type='checkbox' name='tache[]' value='".$value["nomtache"]."'/>
+                  <label for='choix'>".$value["nomtache"]."</label><br />"; // injecter input.//
+              } // 'tache[]' en name pour..
+            } // ..récupérer valeur checkée en tableau.
+          ?>
+          <input type="submit" name="boutton" value="check" >
+        </form>
+    </section>
+    <section class="archive">
+      <h2>Fait</h2>
+        <form action="index.php" method="post" name="formchecked">
+          <div class="done">
+            <?php
+            foreach ($log as $key => $value){
+              if ($value["fin"] == true){
+                echo "<input type='checkbox' style='text-decoration:line-through, red;' name='tache[]' value='".$value."'checked/>
+                  <label for='choix'>".$value["nomtache"]."</label><br />";
+              }
+            }
+          ?>
+        </form>
+      </div>
+    </section>
+    <hr>
+  <footer class="tache">
+    <h2>Ajouter une tâche</h2>
+      <form class="" action="index.php" method="post">
+        <!-- <label for="tache">La tâche à effectuer</label> -->
+        <input type="text" name="tache" value="">
+        <input type="submit" name="ajouter" value="Ajouter">
+      </form>
+  </footer>
+  </div>
 </body>
 </html>
