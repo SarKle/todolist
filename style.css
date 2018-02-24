@@ -28,6 +28,9 @@ color: #fffaf0;
 .archive{
 margin-left: 30px;
 }
+.done{
+text-decoration: line-through wavy red;
+}
 .tache{
 padding-bottom: 10px;
 margin-left: 30px;
